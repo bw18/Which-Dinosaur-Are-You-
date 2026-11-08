@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Which dinosaur are you?</title>
+  <meta name="description" content="A 16-question personality quiz that matches you to one of 143 prehistoric species.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🦖%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg id="scene" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a9fd8"/><stop offset=".5" stop-color="#5fd0c6"/><stop offset=".85" stop-color="#f7f0c6"/></linearGradient>
+<radialGradient id="glow" cx="270" cy="270" r="380" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd27a" stop-opacity=".6"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
+<linearGradient id="vl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b3a37c"/><stop offset="1" stop-color="#7d7458"/></linearGradient>
+<linearGradient id="vd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f5d70"/><stop offset="1" stop-color="#15304a"/></linearGradient>
+<linearGradient id="lava" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc83e"/><stop offset="1" stop-color="#e8561c"/></linearGradient>
+<linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#43d9d0"/><stop offset="1" stop-color="#1a93bd"/></linearGradient>
+<linearGradient id="sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e2aa"/><stop offset="1" stop-color="#e4c68a"/></linearGradient>
+<linearGradient id="trunk" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bd7a3d"/><stop offset="1" stop-color="#8a4a22"/></linearGradient>
+<linearGradient id="fg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1b4d22"/><stop offset="1" stop-color="#3b8a35"/></linearGradient>
+<g id="cloud" fill="#fff7dc"><ellipse rx="72" ry="18"/><circle cx="-22" cy="-14" r="22"/><circle cx="18" cy="-20" r="28"/></g>
+<g id="smk"><circle cx="270" cy="250" r="36"/><circle cx="302" cy="206" r="48"/><circle cx="346" cy="160" r="56"/><circle cx="398" cy="120" r="60"/><circle cx="446" cy="92" r="50"/><circle cx="334" cy="214" r="34"/><circle cx="384" cy="170" r="40"/></g>
+<path id="lv" d="M244 312C238 380 214 430 196 500C190 530 196 560 186 600M268 322C262 400 280 440 262 520M296 310C310 360 300 420 322 480C330 520 322 560 336 600M318 305C350 380 380 430 400 520"/>
+<g id="fr"><path d="M0 0C50-45 120-40 175 25C125-5 55-8 0 0Z" fill="url(#fg)"/><path d="M0 0C55-26 120-26 172 22" fill="none" stroke="#9ccf5a" stroke-width="2.5" stroke-linecap="round"/></g>
+<g id="palm"><path d="M-12 0C-8-140 4-260 6-392L22-392C22-260 14-140 14 0Z" fill="url(#trunk)"/><path d="M-9-50h23M-6-110h22M-2-170h21M2-230h18M4-290h16M5-345h15" stroke="#6e3a1a" stroke-opacity=".35" stroke-width="3" fill="none"/><g transform="translate(14 -398)"><use href="#fr" transform="rotate(-62)"/><use href="#fr" transform="rotate(-28)"/><use href="#fr" transform="rotate(8)"/><use href="#fr" transform="rotate(38)"/><use href="#fr" transform="scale(-1 1) rotate(-62)"/><use href="#fr" transform="scale(-1 1) rotate(-28)"/><use href="#fr" transform="scale(-1 1) rotate(8)"/><use href="#fr" transform="scale(-1 1) rotate(38)"/><circle cx="-8" cy="8" r="15" fill="#7a4a22"/><circle cx="12" cy="10" r="14" fill="#6a3d1c"/><circle cx="-12" cy="3" r="5" fill="#b07a45"/></g></g>
+<g id="bush"><circle cx="0" cy="-30" r="42" fill="#4f9f2e"/><circle cx="-40" cy="-18" r="32" fill="#5fae35"/><circle cx="42" cy="-20" r="34" fill="#5fae35"/><circle cx="-12" cy="-52" r="28" fill="#8ed04b"/><circle cx="26" cy="-46" r="20" fill="#9bd957"/><path d="M-62 0Q0 14 62 0V-8H-62Z" fill="#3f8a2c"/></g>
+<g id="rock"><path d="M-70 0C-80-40-40-80 0-84C45-86 80-50 74 0Z" fill="#9a4f26"/><path d="M-62-10C-66-42-34-72 0-76C-30-60-48-36-52-10Z" fill="#c57a3f"/><path d="M74 0C80-40 50-70 20-80C60-56 62-30 50 0Z" fill="#5c2c19"/></g>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/><rect width="1600" height="900" fill="url(#glow)"/>
+<ellipse cx="120" cy="590" rx="280" ry="90" fill="#fff6d6" opacity=".6"/><ellipse cx="1000" cy="610" rx="260" ry="70" fill="#fff6d6" opacity=".55"/>
+<use href="#cloud" transform="translate(170 110) scale(1.1)"/><use href="#cloud" transform="translate(600 55) scale(.7)"/><use href="#cloud" transform="translate(1130 170)"/><use href="#cloud" transform="translate(1420 80) scale(.8)"/>
+<path d="M1120 700L1290 515L1490 700Z" fill="#3a8fd0"/><path d="M1290 515L1490 700L1340 700Z" fill="#2a6fb0"/>
+<path d="M-10 700C90 640 175 440 232 262L310 262C318 400 322 560 340 700Z" fill="url(#vl)"/>
+<path d="M310 262C365 440 470 640 600 700L340 700C322 560 318 400 310 262Z" fill="url(#vd)"/>
+<path d="M200 340C170 450 120 560 70 650M242 345C225 460 200 560 190 660M286 345C290 450 300 560 312 670" stroke="#6b6248" stroke-width="12" stroke-linecap="round" opacity=".3" fill="none"/>
+<path d="M330 420C380 520 430 600 500 680M350 380C410 500 460 600 540 690" stroke="#4a8a9c" stroke-width="9" stroke-linecap="round" opacity=".25" fill="none"/>
+<path d="M218 300C228 262 250 250 271 250C292 250 314 262 326 300C312 288 306 316 296 296C288 322 276 300 268 322C260 300 250 318 244 296C236 312 228 296 218 300Z" fill="url(#lava)"/>
+<ellipse cx="271" cy="256" rx="30" ry="9" fill="#ff7a1a"/><ellipse cx="271" cy="257" rx="18" ry="4" fill="#ffd45c"/>
+<g fill="none" stroke-linecap="round"><use href="#lv" stroke="#d63f12" stroke-width="9"/><use href="#lv" stroke="#ff9a2a" stroke-width="4.5"/></g>
+<path d="M150 560C190 520 230 500 262 470M128 610C170 575 215 560 250 535" stroke="#fff3dc" stroke-width="14" stroke-linecap="round" fill="none" opacity=".85"/>
+<use href="#smk" fill="#e6d2ad" transform="translate(6 9)"/><use href="#smk" fill="#fff4de"/>
+<path d="M0 700C260 690 520 700 800 712S1250 700 1600 706V900H0Z" fill="url(#sand)"/>
+<path d="M1180 900C1200 830 1270 760 1330 692H1600V900Z" fill="url(#sea)"/>
+<g fill="none" stroke-linecap="round"><path d="M1185 895C1205 830 1272 765 1332 697" stroke="#effcf6" stroke-width="6" opacity=".9"/><g stroke="#b2f1ea" stroke-width="4" opacity=".85"><path d="M1310 780q25-14 50 0t50 0"/><path d="M1450 725q20-10 40 0t40 0"/><path d="M1390 860q30-16 60 0t60 0"/><path d="M1520 810q22-12 44 0t44 0"/></g></g>
+<use href="#rock" transform="translate(1500 770) scale(.6)"/>
+<g id="back"><use href="#bush" transform="translate(40 720) scale(.7)"/><use href="#bush" transform="translate(120 716) scale(.55)"/><use href="#bush" transform="translate(430 716) scale(.6)"/><use href="#bush" transform="translate(520 722) scale(.75)"/><use href="#bush" transform="translate(640 720) scale(.6)"/><use href="#bush" transform="translate(1040 726) scale(.7)"/>
+<use href="#palm" transform="translate(470 722) scale(.22)"/><use href="#palm" transform="translate(585 724) scale(.26)"/><use href="#palm" transform="translate(1100 728) scale(.2)"/></g>
+<use href="#palm" transform="translate(150 790) scale(.95)"/><use href="#palm" transform="translate(1235 840) scale(1.15)"/>
+<use href="#bush" transform="translate(40 900) scale(1.7)"/><use href="#bush" transform="translate(210 890) scale(1.3)"/><use href="#bush" transform="translate(380 900) scale(1.5)"/><use href="#bush" transform="translate(540 905) scale(1.2)"/><use href="#bush" transform="translate(1100 900) scale(1.4)"/>
+<use href="#rock" transform="translate(30 905) scale(1.1)"/><use href="#rock" transform="translate(250 910) scale(.75)"/><use href="#rock" transform="translate(1160 912) scale(.9)"/>
+</svg>
+  <div class="progress" aria-hidden="true"><div id="bar"></div></div>
+  <main id="app"></main>
+  <script src="data.js"></script>
+  <script src="engine.js"></script>
+  <script src="quiz.js"></script>
+</body>
+</html>
