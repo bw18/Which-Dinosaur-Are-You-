@@ -110,7 +110,7 @@
     });
     show(
       el('p', { class: 'kicker' }, 'Last step'),
-      el('h2', {}, 'Now a little about your body'),
+      el('h2', {}, 'Biometrics'),
       el('p', { class: 'note' }, 'We compare your size, stockiness and power to each dinosaur. This stays in your browser.'),
       form,
       back(() => (S.queue.length ? follow(S.queue.length - 1) : question(TOTAL - 1)))
